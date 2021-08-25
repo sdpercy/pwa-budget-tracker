@@ -34,7 +34,7 @@ function saveRecord(record) {
     const transaction = db.transaction(['new_transaction'], 'readwrite');
   
     // access the object store for `new_pizza`
-    const budgetObjectStore = transaction.objectStore('new_tranaction');
+    const budgetObjectStore = transaction.objectStore('new_transaction');
   
     // add record to your store with add method
     budgetObjectStore.add(record);
@@ -70,7 +70,7 @@ getAll.onsuccess = function() {
           // open one more transaction
           const transaction = db.transaction(['new_transaction'], 'readwrite');
           // access the new_pizza object store
-          const budgetObjectStore = transaction.objectStore('new_pizza');
+          const budgetObjectStore = transaction.objectStore('new_transaction');
           // clear all items in your store
           budgetObjectStore.clear();
 
